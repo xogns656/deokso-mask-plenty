@@ -6,7 +6,7 @@ const Content = ({ pharmacy }) => {
     //모바일 지도 연결
     if (navigator.userAgent.indexOf("Mobi")) {
       window.open(
-        `https://m.map.naver.com/search2/search.nhn?query=${addr}&siteSort=0&sm=clk#/list`
+        `https://m.map.naver.com/search2/search.nhn?query=${addr}&siteSort=0&sm=clk#/map`
       );
     }
     //웹 지도 연결
