@@ -9,7 +9,6 @@ const App = () => {
       if (maskDataRequest.status === 200) {
         const getData = await maskDataRequest.json();
         const { stores } = getData;
-        console.log(stores);
         let filterData = [];
         filterData = stores.filter(
           curr => curr.remain_stat !== "empty" && curr.remain_stat !== "break"
