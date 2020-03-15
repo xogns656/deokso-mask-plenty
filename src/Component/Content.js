@@ -3,7 +3,7 @@ import styled from "styled-components";
 
 const Content = ({ pharmacy }) => {
   const showPharmacyPosition = addr => {
-    //모바일 지도 연결결
+    //모바일 지도 연결
     if (navigator.userAgent.indexOf("Mobi")) {
       window.open(
         `https://m.map.naver.com/search2/search.nhn?query=${addr}&siteSort=0&sm=clk#/list`
