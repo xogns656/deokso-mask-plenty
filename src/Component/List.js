@@ -6,7 +6,7 @@ const List = ({ maskData }) => {
   return (
     <ListWrapper>
       {maskData.map(curr => (
-        <Content pharmacy={curr} key={curr.name} />
+        <Content pharmacy={curr} key={curr.code} />
       ))}
     </ListWrapper>
   );
@@ -14,6 +14,7 @@ const List = ({ maskData }) => {
 
 const ListWrapper = styled.ul`
   list-style: none;
+  width: 100%;
   padding: 0;
   display: flex;
   justify-content: center;

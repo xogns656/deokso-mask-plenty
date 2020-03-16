@@ -16,7 +16,10 @@ const App = () => {
           const { stores } = getData;
           let filterData = [];
           filterData = stores.filter(
-            curr => curr.remain_stat !== "empty" && curr.remain_stat !== "break"
+            curr =>
+              curr.remain_stat !== "empty" &&
+              curr.remain_stat !== "break" &&
+              curr.remain_stat !== null
           );
           filterData.sort((a, b) => {
             const matching = {
@@ -28,11 +31,11 @@ const App = () => {
             };
 
             if (matching[a.remain_stat] > matching[b.remain_stat]) {
-              return 1;
+              return -1;
             } else if (matching[a.remain_stat] === matching[b.remain_stat]) {
               return 0;
             } else {
-              return -1;
+              return 1;
             }
           });
 
