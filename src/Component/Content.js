@@ -48,7 +48,12 @@ const Content = ({ pharmacy }) => {
   );
 };
 
-const Wrapper = styled.li``;
+const Wrapper = styled.li`
+  width: 50%;
+  @media screen and (max-width: 600px) {
+    width: 100%;
+  }
+`;
 
 const TextWrapper = styled.div`
   text-align: left;
